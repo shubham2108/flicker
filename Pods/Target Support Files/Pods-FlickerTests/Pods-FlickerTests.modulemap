@@ -1,0 +1,6 @@
+framework module Pods_FlickerTests {
+  umbrella header "Pods-FlickerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

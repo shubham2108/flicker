@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26662E6490DE3AE229E9D8FA /* Pods_FlickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B8C70BD8A0A4F57D9B7C25 /* Pods_FlickerTests.framework */; };
+		35347B98B3745D65A45A6315 /* Pods_FlickerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC4B5F872BF8FE1785FE1CD /* Pods_FlickerUITests.framework */; };
+		36FD002E369E6EB5F7780BA9 /* Pods_Flicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34CB4B29429AAE00382D43D2 /* Pods_Flicker.framework */; };
 		52CD0FEE1F6A6CCB008DF1B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD0FED1F6A6CCB008DF1B6 /* AppDelegate.swift */; };
 		52CD0FF01F6A6CCB008DF1B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD0FEF1F6A6CCB008DF1B6 /* ViewController.swift */; };
 		52CD0FF31F6A6CCB008DF1B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CD0FF11F6A6CCB008DF1B6 /* Main.storyboard */; };
@@ -14,6 +17,18 @@
 		52CD0FF81F6A6CCB008DF1B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CD0FF61F6A6CCB008DF1B6 /* LaunchScreen.storyboard */; };
 		52CD10031F6A6CCB008DF1B6 /* FlickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD10021F6A6CCB008DF1B6 /* FlickerTests.swift */; };
 		52CD100E1F6A6CCB008DF1B6 /* FlickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD100D1F6A6CCB008DF1B6 /* FlickerUITests.swift */; };
+		52CD10211F6A905C008DF1B6 /* ServiceLayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD10201F6A905C008DF1B6 /* ServiceLayerManager.swift */; };
+		52EDDA481F6AB41D0048E4D7 /* FeedJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA471F6AB41D0048E4D7 /* FeedJSON.swift */; };
+		52EDDA4C1F6AB4AC0048E4D7 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA4B1F6AB4AC0048E4D7 /* FeedItem.swift */; };
+		52EDDA4E1F6AB4E40048E4D7 /* FeedMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA4D1F6AB4E40048E4D7 /* FeedMedia.swift */; };
+		52EDDA501F6ABDCB0048E4D7 /* ImageGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA4F1F6ABDCB0048E4D7 /* ImageGalleryViewController.swift */; };
+		52EDDA541F6AC40B0048E4D7 /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA521F6AC40B0048E4D7 /* FeedImageCell.swift */; };
+		52EDDA551F6AC40B0048E4D7 /* FeedImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EDDA531F6AC40B0048E4D7 /* FeedImageCell.xib */; };
+		52EDDA571F6BD94A0048E4D7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA561F6BD94A0048E4D7 /* Reachability.swift */; };
+		52EDDA591F6BE28A0048E4D7 /* ImageGalleryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA581F6BE28A0048E4D7 /* ImageGalleryViewControllerTests.swift */; };
+		52EDDA601F6C200D0048E4D7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA5F1F6C200C0048E4D7 /* UIViewController+Alert.swift */; };
+		52EDDA621F6C252F0048E4D7 /* FlickerStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA611F6C252F0048E4D7 /* FlickerStrings.swift */; };
+		52EDDA651F6C27960048E4D7 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA641F6C27960048E4D7 /* String+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		160FE838F78964B2DCADEF39 /* Pods-FlickerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickerUITests/Pods-FlickerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		34CB4B29429AAE00382D43D2 /* Pods_Flicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC4B5F872BF8FE1785FE1CD /* Pods_FlickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CD0FEA1F6A6CCB008DF1B6 /* Flicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CD0FED1F6A6CCB008DF1B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52CD0FEF1F6A6CCB008DF1B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52CD0FEF1F6A6CCB008DF1B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Flicker/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		52CD0FF21F6A6CCB008DF1B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52CD0FF41F6A6CCB008DF1B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52CD0FF71F6A6CCB008DF1B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +65,24 @@
 		52CD10091F6A6CCB008DF1B6 /* FlickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CD100D1F6A6CCB008DF1B6 /* FlickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerUITests.swift; sourceTree = "<group>"; };
 		52CD100F1F6A6CCB008DF1B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52CD10201F6A905C008DF1B6 /* ServiceLayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLayerManager.swift; sourceTree = "<group>"; };
+		52EDDA471F6AB41D0048E4D7 /* FeedJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedJSON.swift; sourceTree = "<group>"; };
+		52EDDA4B1F6AB4AC0048E4D7 /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		52EDDA4D1F6AB4E40048E4D7 /* FeedMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedMedia.swift; sourceTree = "<group>"; };
+		52EDDA4F1F6ABDCB0048E4D7 /* ImageGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewController.swift; sourceTree = "<group>"; };
+		52EDDA521F6AC40B0048E4D7 /* FeedImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
+		52EDDA531F6AC40B0048E4D7 /* FeedImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedImageCell.xib; sourceTree = "<group>"; };
+		52EDDA561F6BD94A0048E4D7 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		52EDDA581F6BE28A0048E4D7 /* ImageGalleryViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewControllerTests.swift; sourceTree = "<group>"; };
+		52EDDA5F1F6C200C0048E4D7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		52EDDA611F6C252F0048E4D7 /* FlickerStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlickerStrings.swift; path = Constants/FlickerStrings.swift; sourceTree = "<group>"; };
+		52EDDA641F6C27960048E4D7 /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		AEE9372120E7E269346A5E3C /* Pods-FlickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickerTests/Pods-FlickerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B0B8C70BD8A0A4F57D9B7C25 /* Pods_FlickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6A9B918D80330F3841CB9FD /* Pods-Flicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flicker/Pods-Flicker.debug.xcconfig"; sourceTree = "<group>"; };
+		D582A46903849411C464F488 /* Pods-FlickerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickerTests/Pods-FlickerTests.release.xcconfig"; sourceTree = "<group>"; };
+		DA684170EFD6B3056AEF5ACB /* Pods-FlickerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickerUITests/Pods-FlickerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F79436800A0B59189918E11A /* Pods-Flicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flicker/Pods-Flicker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36FD002E369E6EB5F7780BA9 /* Pods_Flicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26662E6490DE3AE229E9D8FA /* Pods_FlickerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35347B98B3745D65A45A6315 /* Pods_FlickerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +120,8 @@
 				52CD10011F6A6CCB008DF1B6 /* FlickerTests */,
 				52CD100C1F6A6CCB008DF1B6 /* FlickerUITests */,
 				52CD0FEB1F6A6CCB008DF1B6 /* Products */,
+				C81342958703F51CB7655DDC /* Pods */,
+				D5387B37C0B7D3F74552D16F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +138,13 @@
 		52CD0FEC1F6A6CCB008DF1B6 /* Flicker */ = {
 			isa = PBXGroup;
 			children = (
+				52EDDA5E1F6C1F760048E4D7 /* Utility */,
+				52CD101B1F6A8FE6008DF1B6 /* Models */,
+				52CD101C1F6A8FE6008DF1B6 /* Networking */,
+				52CD101F1F6A8FE6008DF1B6 /* View */,
 				52CD0FED1F6A6CCB008DF1B6 /* AppDelegate.swift */,
 				52CD0FEF1F6A6CCB008DF1B6 /* ViewController.swift */,
+				52EDDA4F1F6ABDCB0048E4D7 /* ImageGalleryViewController.swift */,
 				52CD0FF11F6A6CCB008DF1B6 /* Main.storyboard */,
 				52CD0FF41F6A6CCB008DF1B6 /* Assets.xcassets */,
 				52CD0FF61F6A6CCB008DF1B6 /* LaunchScreen.storyboard */,
@@ -111,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				52CD10021F6A6CCB008DF1B6 /* FlickerTests.swift */,
+				52EDDA581F6BE28A0048E4D7 /* ImageGalleryViewControllerTests.swift */,
 				52CD10041F6A6CCB008DF1B6 /* Info.plist */,
 			);
 			path = FlickerTests;
@@ -125,6 +172,91 @@
 			path = FlickerUITests;
 			sourceTree = "<group>";
 		};
+		52CD101B1F6A8FE6008DF1B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52EDDA471F6AB41D0048E4D7 /* FeedJSON.swift */,
+				52EDDA4B1F6AB4AC0048E4D7 /* FeedItem.swift */,
+				52EDDA4D1F6AB4E40048E4D7 /* FeedMedia.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52CD101C1F6A8FE6008DF1B6 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				52EDDA561F6BD94A0048E4D7 /* Reachability.swift */,
+				52CD101D1F6A8FE6008DF1B6 /* Service Layer */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		52CD101D1F6A8FE6008DF1B6 /* Service Layer */ = {
+			isa = PBXGroup;
+			children = (
+				52CD10201F6A905C008DF1B6 /* ServiceLayerManager.swift */,
+			);
+			path = "Service Layer";
+			sourceTree = "<group>";
+		};
+		52CD101F1F6A8FE6008DF1B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52EDDA511F6AC3430048E4D7 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52EDDA511F6AC3430048E4D7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52EDDA521F6AC40B0048E4D7 /* FeedImageCell.swift */,
+				52EDDA531F6AC40B0048E4D7 /* FeedImageCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		52EDDA5E1F6C1F760048E4D7 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				52EDDA631F6C253B0048E4D7 /* Constants */,
+				52EDDA5F1F6C200C0048E4D7 /* UIViewController+Alert.swift */,
+				52EDDA641F6C27960048E4D7 /* String+Ext.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		52EDDA631F6C253B0048E4D7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				52EDDA611F6C252F0048E4D7 /* FlickerStrings.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		C81342958703F51CB7655DDC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6A9B918D80330F3841CB9FD /* Pods-Flicker.debug.xcconfig */,
+				F79436800A0B59189918E11A /* Pods-Flicker.release.xcconfig */,
+				AEE9372120E7E269346A5E3C /* Pods-FlickerTests.debug.xcconfig */,
+				D582A46903849411C464F488 /* Pods-FlickerTests.release.xcconfig */,
+				160FE838F78964B2DCADEF39 /* Pods-FlickerUITests.debug.xcconfig */,
+				DA684170EFD6B3056AEF5ACB /* Pods-FlickerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D5387B37C0B7D3F74552D16F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34CB4B29429AAE00382D43D2 /* Pods_Flicker.framework */,
+				B0B8C70BD8A0A4F57D9B7C25 /* Pods_FlickerTests.framework */,
+				3FC4B5F872BF8FE1785FE1CD /* Pods_FlickerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52CD10121F6A6CCB008DF1B6 /* Build configuration list for PBXNativeTarget "Flicker" */;
 			buildPhases = (
+				8D5F9E3C0C41F0D44B87D618 /* [CP] Check Pods Manifest.lock */,
 				52CD0FE61F6A6CCB008DF1B6 /* Sources */,
 				52CD0FE71F6A6CCB008DF1B6 /* Frameworks */,
 				52CD0FE81F6A6CCB008DF1B6 /* Resources */,
+				FAA8C1CEF7E882882984BF5F /* [CP] Embed Pods Frameworks */,
+				45D1620D0D1D907EDEB91105 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +284,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52CD10151F6A6CCB008DF1B6 /* Build configuration list for PBXNativeTarget "FlickerTests" */;
 			buildPhases = (
+				ED78E1D999FE69201243B1B8 /* [CP] Check Pods Manifest.lock */,
 				52CD0FFA1F6A6CCB008DF1B6 /* Sources */,
 				52CD0FFB1F6A6CCB008DF1B6 /* Frameworks */,
 				52CD0FFC1F6A6CCB008DF1B6 /* Resources */,
+				C5B7A240FDCDB455833BFC73 /* [CP] Embed Pods Frameworks */,
+				74B3D00A4F6F0B5E4D31DDE2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +305,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52CD10181F6A6CCB008DF1B6 /* Build configuration list for PBXNativeTarget "FlickerUITests" */;
 			buildPhases = (
+				BF4D0A909D38A3DB9EE18129 /* [CP] Check Pods Manifest.lock */,
 				52CD10051F6A6CCB008DF1B6 /* Sources */,
 				52CD10061F6A6CCB008DF1B6 /* Frameworks */,
 				52CD10071F6A6CCB008DF1B6 /* Resources */,
+				28A6A8AD8AA65DB29D521171 /* [CP] Embed Pods Frameworks */,
+				7A0D5F9A77EB46E947980B05 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +334,7 @@
 				TargetAttributes = {
 					52CD0FE91F6A6CCB008DF1B6 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 67R5A99QJ7;
 						ProvisioningStyle = Automatic;
 					};
 					52CD0FFD1F6A6CCB008DF1B6 = {
@@ -233,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52CD0FF81F6A6CCB008DF1B6 /* LaunchScreen.storyboard in Resources */,
+				52EDDA551F6AC40B0048E4D7 /* FeedImageCell.xib in Resources */,
 				52CD0FF51F6A6CCB008DF1B6 /* Assets.xcassets in Resources */,
 				52CD0FF31F6A6CCB008DF1B6 /* Main.storyboard in Resources */,
 			);
@@ -254,12 +397,178 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28A6A8AD8AA65DB29D521171 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlickerUITests/Pods-FlickerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45D1620D0D1D907EDEB91105 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flicker/Pods-Flicker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74B3D00A4F6F0B5E4D31DDE2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlickerTests/Pods-FlickerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A0D5F9A77EB46E947980B05 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlickerUITests/Pods-FlickerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D5F9E3C0C41F0D44B87D618 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Flicker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF4D0A909D38A3DB9EE18129 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlickerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5B7A240FDCDB455833BFC73 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlickerTests/Pods-FlickerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED78E1D999FE69201243B1B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlickerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAA8C1CEF7E882882984BF5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Flicker/Pods-Flicker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flicker/Pods-Flicker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		52CD0FE61F6A6CCB008DF1B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EDDA501F6ABDCB0048E4D7 /* ImageGalleryViewController.swift in Sources */,
+				52EDDA621F6C252F0048E4D7 /* FlickerStrings.swift in Sources */,
+				52CD10211F6A905C008DF1B6 /* ServiceLayerManager.swift in Sources */,
+				52EDDA481F6AB41D0048E4D7 /* FeedJSON.swift in Sources */,
 				52CD0FF01F6A6CCB008DF1B6 /* ViewController.swift in Sources */,
+				52EDDA4C1F6AB4AC0048E4D7 /* FeedItem.swift in Sources */,
+				52EDDA651F6C27960048E4D7 /* String+Ext.swift in Sources */,
+				52EDDA601F6C200D0048E4D7 /* UIViewController+Alert.swift in Sources */,
+				52EDDA571F6BD94A0048E4D7 /* Reachability.swift in Sources */,
+				52EDDA541F6AC40B0048E4D7 /* FeedImageCell.swift in Sources */,
+				52EDDA4E1F6AB4E40048E4D7 /* FeedMedia.swift in Sources */,
 				52CD0FEE1F6A6CCB008DF1B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52CD10031F6A6CCB008DF1B6 /* FlickerTests.swift in Sources */,
+				52EDDA591F6BE28A0048E4D7 /* ImageGalleryViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,8 +720,10 @@
 		};
 		52CD10131F6A6CCB008DF1B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6A9B918D80330F3841CB9FD /* Pods-Flicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 67R5A99QJ7;
 				INFOPLIST_FILE = Flicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shubham.Flicker;
@@ -422,8 +734,10 @@
 		};
 		52CD10141F6A6CCB008DF1B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F79436800A0B59189918E11A /* Pods-Flicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 67R5A99QJ7;
 				INFOPLIST_FILE = Flicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shubham.Flicker;
@@ -434,6 +748,7 @@
 		};
 		52CD10161F6A6CCB008DF1B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEE9372120E7E269346A5E3C /* Pods-FlickerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -448,6 +763,7 @@
 		};
 		52CD10171F6A6CCB008DF1B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D582A46903849411C464F488 /* Pods-FlickerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -462,6 +778,7 @@
 		};
 		52CD10191F6A6CCB008DF1B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 160FE838F78964B2DCADEF39 /* Pods-FlickerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = FlickerUITests/Info.plist;
@@ -475,6 +792,7 @@
 		};
 		52CD101A1F6A6CCB008DF1B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA684170EFD6B3056AEF5ACB /* Pods-FlickerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = FlickerUITests/Info.plist;
@@ -505,6 +823,7 @@
 				52CD10141F6A6CCB008DF1B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52CD10151F6A6CCB008DF1B6 /* Build configuration list for PBXNativeTarget "FlickerTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +832,7 @@
 				52CD10171F6A6CCB008DF1B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52CD10181F6A6CCB008DF1B6 /* Build configuration list for PBXNativeTarget "FlickerUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +841,7 @@
 				52CD101A1F6A6CCB008DF1B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

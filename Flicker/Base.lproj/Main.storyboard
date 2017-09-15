@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Kb9-Ev-sKa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Flicker-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Flicker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,100 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vib-Io-QPJ">
+                                <rect key="frame" x="129" y="316.5" width="117" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Flicker Gallery"/>
+                                <connections>
+                                    <segue destination="wZz-l8-hGf" kind="show" id="CBP-Ll-Ns5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vib-Io-QPJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0nd-HH-dDn"/>
+                            <constraint firstItem="vib-Io-QPJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="muF-3V-Oob"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Flicker" id="FCp-og-Jgo">
+                        <barButtonItem key="backBarButtonItem" title=" " id="TWv-GP-zQZ"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2WG-1N-V6W">
+            <objects>
+                <navigationController id="Kb9-Ev-sKa" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QhX-jD-JQa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uQz-hN-Ksi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R0o-Ep-Ssk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-554" y="139"/>
+        </scene>
+        <!--Flicker Gallery-->
+        <scene sceneID="U1k-5o-7Bm">
+            <objects>
+                <viewController storyboardIdentifier="GalleryViewController" automaticallyAdjustsScrollViewInsets="NO" id="wZz-l8-hGf" customClass="ImageGalleryViewController" customModule="Flicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PEw-KC-Mm2"/>
+                        <viewControllerLayoutGuide type="bottom" id="hlo-u4-HzW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jJS-Xz-xM6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wzj-nD-7Ua">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Y3V-9I-Ohb">
+                                    <size key="itemSize" width="92" height="90"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="feedCell" id="Sbg-HH-SE7" customClass="FeedImageCell" customModule="Flicker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="92" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="wZz-l8-hGf" id="com-5v-oCQ"/>
+                                    <outlet property="delegate" destination="wZz-l8-hGf" id="bLq-Ra-17D"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hlo-u4-HzW" firstAttribute="top" secondItem="Wzj-nD-7Ua" secondAttribute="bottom" id="Hrh-S3-vaI"/>
+                            <constraint firstAttribute="trailing" secondItem="Wzj-nD-7Ua" secondAttribute="trailing" id="agr-v8-jv7"/>
+                            <constraint firstItem="Wzj-nD-7Ua" firstAttribute="leading" secondItem="jJS-Xz-xM6" secondAttribute="leading" id="hyH-2C-jHV"/>
+                            <constraint firstItem="Wzj-nD-7Ua" firstAttribute="top" secondItem="PEw-KC-Mm2" secondAttribute="bottom" id="lrh-hd-L3U"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Flicker Gallery" id="ybh-EX-U9H">
+                        <barButtonItem key="backBarButtonItem" title="  " id="OZl-2T-RsR"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageCollectionView" destination="Wzj-nD-7Ua" id="W7v-1g-D59"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S9s-Ga-cdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="856.79999999999995" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
