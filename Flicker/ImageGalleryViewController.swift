@@ -47,6 +47,22 @@ class ImageGalleryViewController: UIViewController {
         imageCollectionView.register(cellNib, forCellWithReuseIdentifier: reuseIdentifier)
     }
     
+    //Refresh Flicker gallery with new public images
+    @IBAction func refreshGallery(_ sender: UIBarButtonItem) {
+        getFeeds()
+    }
+    
+    //Manage UICollection View Layout
+    func manageCollectionViewLayout(_ collectionView: UICollectionView, indexPath: IndexPath?) {
+        UIView.animate(withDuration: 0.2) { () -> Void in
+            collectionView.collectionViewLayout.invalidateLayout()
+            collectionView.setCollectionViewLayout(self.isGrid ? ListFlowLayout(index: indexPath) : GridFlowLayout(), animated: true)
+        }
+        isGrid = !isGrid
+        // change background color based on flow layout
+        collectionView.backgroundColor = isGrid ? .clear : .black
+    }
+    
     // Get public feed from flicker
     fileprivate func getFeeds() {
         ServiceLayerManager.getPublicFeeds { [weak self] (feed, error) in
@@ -66,9 +82,9 @@ class ImageGalleryViewController: UIViewController {
     func handleAlertActions(actoin: UIAlertAction) {
         switch actoin.style {
         case .default:
-            self.getFeeds()
+            getFeeds()
         default:
-            self.navigationController?.popViewController(animated: true)
+            navigationController?.popViewController(animated: true)
         }
     }
 }

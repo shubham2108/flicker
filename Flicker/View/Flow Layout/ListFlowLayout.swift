@@ -18,7 +18,7 @@ class ListFlowLayout: UICollectionViewFlowLayout {
         setupLayout()
     }
     
-    init(index: IndexPath) {
+    init(index: IndexPath?) {
         super.init()
         selctedIndex = index
         setupLayout()

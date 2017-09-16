@@ -32,6 +32,7 @@
 		52EDDA681F6C63DF0048E4D7 /* GridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA671F6C63DF0048E4D7 /* GridFlowLayout.swift */; };
 		52EDDA6A1F6C63FE0048E4D7 /* ListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA691F6C63FE0048E4D7 /* ListFlowLayout.swift */; };
 		52EDDA6C1F6D31650048E4D7 /* ImageGalleryViewController+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA6B1F6D31650048E4D7 /* ImageGalleryViewController+Delegates.swift */; };
+		52EDDA711F6D60AD0048E4D7 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA701F6D60AD0048E4D7 /* Readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		52EDDA671F6C63DF0048E4D7 /* GridFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridFlowLayout.swift; sourceTree = "<group>"; };
 		52EDDA691F6C63FE0048E4D7 /* ListFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListFlowLayout.swift; sourceTree = "<group>"; };
 		52EDDA6B1F6D31650048E4D7 /* ImageGalleryViewController+Delegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageGalleryViewController+Delegates.swift"; sourceTree = "<group>"; };
+		52EDDA701F6D60AD0048E4D7 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		AEE9372120E7E269346A5E3C /* Pods-FlickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickerTests/Pods-FlickerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B0B8C70BD8A0A4F57D9B7C25 /* Pods_FlickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A9B918D80330F3841CB9FD /* Pods-Flicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flicker/Pods-Flicker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		52CD0FE11F6A6CCB008DF1B6 = {
 			isa = PBXGroup;
 			children = (
+				52EDDA701F6D60AD0048E4D7 /* Readme.md */,
 				52CD0FEC1F6A6CCB008DF1B6 /* Flicker */,
 				52CD10011F6A6CCB008DF1B6 /* FlickerTests */,
 				52CD100C1F6A6CCB008DF1B6 /* FlickerUITests */,
@@ -581,6 +584,7 @@
 				52EDDA6A1F6C63FE0048E4D7 /* ListFlowLayout.swift in Sources */,
 				52EDDA481F6AB41D0048E4D7 /* FeedJSON.swift in Sources */,
 				52CD0FF01F6A6CCB008DF1B6 /* ViewController.swift in Sources */,
+				52EDDA711F6D60AD0048E4D7 /* Readme.md in Sources */,
 				52EDDA4C1F6AB4AC0048E4D7 /* FeedItem.swift in Sources */,
 				52EDDA651F6C27960048E4D7 /* String+Ext.swift in Sources */,
 				52EDDA681F6C63DF0048E4D7 /* GridFlowLayout.swift in Sources */,

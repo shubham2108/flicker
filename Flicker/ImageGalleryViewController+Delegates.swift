@@ -30,13 +30,7 @@ extension ImageGalleryViewController: UICollectionViewDelegate, UICollectionView
     
     //zoom the selected image
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        UIView.animate(withDuration: 0.2) { () -> Void in
-            collectionView.collectionViewLayout.invalidateLayout()
-            collectionView.setCollectionViewLayout(self.isGrid ? ListFlowLayout(index: indexPath) : GridFlowLayout(), animated: true)
-        }
-        isGrid = !isGrid
-        // change background color based on flow layout
-        collectionView.backgroundColor = isGrid ? .clear : .black
+        manageCollectionViewLayout(collectionView, indexPath: indexPath)
     }
     
 }

@@ -67,7 +67,12 @@ class ImageGalleryViewControllerTests: XCTestCase {
         }
     }
     
-    
+    func testCollectionViewLayout() {
+        if let collectionView = galleryViewController.imageCollectionView {
+            galleryViewController.isGrid = true
+            galleryViewController.manageCollectionViewLayout(collectionView, indexPath: nil)
+        }
+    }
     
     
     func testPerformanceExample() {
