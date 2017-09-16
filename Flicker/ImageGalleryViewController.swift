@@ -66,13 +66,14 @@ class ImageGalleryViewController: UIViewController {
     // Get public feed from flicker
     fileprivate func getFeeds() {
         ServiceLayerManager.getPublicFeeds { [weak self] (feed, error) in
+            guard let strongSelf = self else { return }
             if let feed = feed {
-                self?.publicFeed = feed
-                self?.imageCollectionView.reloadData()
+                strongSelf.publicFeed = feed
+                strongSelf.imageCollectionView.reloadData()
             }else {
                 guard let error = error else {return}
-                self?.showAlert(title: ERROR, message: error, completionHandler: { [weak self] action in
-                    self?.handleAlertActions(actoin: action)
+                strongSelf.showAlert(title: ERROR, message: error, completionHandler: { action in
+                    strongSelf.handleAlertActions(actoin: action)
                 })
             }
         }

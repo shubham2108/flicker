@@ -8,29 +8,24 @@
 
 import Foundation
 import Alamofire
-import ObjectMapper
 
 class ServiceLayerManager {
     
-    enum FeedAPI: String {
-        case baseURL = "https://api.flickr.com/"
-        case publicURL = "services/feeds/photos_public.gne?lang=en-us&format=json&nojsoncallback=1"
-    }
+    // function to handles the API response for any error and returns the result value
+    class func request(_ url: URLConvertible, method: HTTPMethod = .get, parameters: Parameters? = nil, completionHandler: @escaping (_ responseData: Any?, _ error: String?) -> ()) {
         
-    class func getPublicFeeds(completionHandler: @escaping (_ feed: FeedJSON?, _ error: String?) -> ()) {
         if Reachability()?.currentReachabilityStatus != .notReachable {
-            let publicFeedURL = FeedAPI.baseURL.rawValue + FeedAPI.publicURL.rawValue
-            
-            Alamofire.request(publicFeedURL).responseJSON { responseData in
+            Alamofire.request(url).responseJSON { responseData in
                 if let resultValue = responseData.result.value {
-                    let feed = Mapper<FeedJSON>().map(JSONObject: resultValue)
-                    completionHandler(feed, nil)
+                    completionHandler(resultValue, nil)
                 }else {
-                    completionHandler(nil, responseData.error.debugDescription)
+                    completionHandler(nil, responseData.error?.localizedDescription)
                 }
             }
         }else {
             completionHandler(nil, NO_CONNECTION)
         }
-    }    
+    }
 }
+
+

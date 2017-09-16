@@ -91,9 +91,10 @@ extension ImageGalleryViewControllerTests {
     func getPublicFeeds() {
         self.expectation = self.expectation(description: "Expectation for public feeds")
         ServiceLayerManager.getPublicFeeds { [weak self] (feed, error) in
+            guard let strongSelf = self else { return }
             if let feed = feed {
-                self?.galleryViewController.publicFeed = feed
-                self?.expectation?.fulfill()
+                strongSelf.galleryViewController.publicFeed = feed
+                strongSelf.expectation?.fulfill()
             }else {
                 XCTAssertNil(error, "\(String(describing: error))")
             }
