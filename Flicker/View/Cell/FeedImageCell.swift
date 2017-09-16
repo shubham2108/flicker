@@ -23,5 +23,10 @@ class FeedImageCell: UICollectionViewCell {
             }
         }
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        feedImageView.image = nil
+    }
 
 }

@@ -29,6 +29,9 @@
 		52EDDA601F6C200D0048E4D7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA5F1F6C200C0048E4D7 /* UIViewController+Alert.swift */; };
 		52EDDA621F6C252F0048E4D7 /* FlickerStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA611F6C252F0048E4D7 /* FlickerStrings.swift */; };
 		52EDDA651F6C27960048E4D7 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA641F6C27960048E4D7 /* String+Ext.swift */; };
+		52EDDA681F6C63DF0048E4D7 /* GridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA671F6C63DF0048E4D7 /* GridFlowLayout.swift */; };
+		52EDDA6A1F6C63FE0048E4D7 /* ListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA691F6C63FE0048E4D7 /* ListFlowLayout.swift */; };
+		52EDDA6C1F6D31650048E4D7 /* ImageGalleryViewController+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA6B1F6D31650048E4D7 /* ImageGalleryViewController+Delegates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		52EDDA5F1F6C200C0048E4D7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		52EDDA611F6C252F0048E4D7 /* FlickerStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlickerStrings.swift; path = Constants/FlickerStrings.swift; sourceTree = "<group>"; };
 		52EDDA641F6C27960048E4D7 /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		52EDDA671F6C63DF0048E4D7 /* GridFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridFlowLayout.swift; sourceTree = "<group>"; };
+		52EDDA691F6C63FE0048E4D7 /* ListFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListFlowLayout.swift; sourceTree = "<group>"; };
+		52EDDA6B1F6D31650048E4D7 /* ImageGalleryViewController+Delegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageGalleryViewController+Delegates.swift"; sourceTree = "<group>"; };
 		AEE9372120E7E269346A5E3C /* Pods-FlickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickerTests/Pods-FlickerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B0B8C70BD8A0A4F57D9B7C25 /* Pods_FlickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A9B918D80330F3841CB9FD /* Pods-Flicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flicker/Pods-Flicker.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 				52CD0FED1F6A6CCB008DF1B6 /* AppDelegate.swift */,
 				52CD0FEF1F6A6CCB008DF1B6 /* ViewController.swift */,
 				52EDDA4F1F6ABDCB0048E4D7 /* ImageGalleryViewController.swift */,
+				52EDDA6B1F6D31650048E4D7 /* ImageGalleryViewController+Delegates.swift */,
 				52CD0FF11F6A6CCB008DF1B6 /* Main.storyboard */,
 				52CD0FF41F6A6CCB008DF1B6 /* Assets.xcassets */,
 				52CD0FF61F6A6CCB008DF1B6 /* LaunchScreen.storyboard */,
@@ -202,6 +209,7 @@
 		52CD101F1F6A8FE6008DF1B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				52EDDA661F6C637D0048E4D7 /* Flow Layout */,
 				52EDDA511F6AC3430048E4D7 /* Cell */,
 			);
 			path = View;
@@ -232,6 +240,15 @@
 				52EDDA611F6C252F0048E4D7 /* FlickerStrings.swift */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		52EDDA661F6C637D0048E4D7 /* Flow Layout */ = {
+			isa = PBXGroup;
+			children = (
+				52EDDA671F6C63DF0048E4D7 /* GridFlowLayout.swift */,
+				52EDDA691F6C63FE0048E4D7 /* ListFlowLayout.swift */,
+			);
+			path = "Flow Layout";
 			sourceTree = "<group>";
 		};
 		C81342958703F51CB7655DDC /* Pods */ = {
@@ -561,14 +578,17 @@
 				52EDDA501F6ABDCB0048E4D7 /* ImageGalleryViewController.swift in Sources */,
 				52EDDA621F6C252F0048E4D7 /* FlickerStrings.swift in Sources */,
 				52CD10211F6A905C008DF1B6 /* ServiceLayerManager.swift in Sources */,
+				52EDDA6A1F6C63FE0048E4D7 /* ListFlowLayout.swift in Sources */,
 				52EDDA481F6AB41D0048E4D7 /* FeedJSON.swift in Sources */,
 				52CD0FF01F6A6CCB008DF1B6 /* ViewController.swift in Sources */,
 				52EDDA4C1F6AB4AC0048E4D7 /* FeedItem.swift in Sources */,
 				52EDDA651F6C27960048E4D7 /* String+Ext.swift in Sources */,
+				52EDDA681F6C63DF0048E4D7 /* GridFlowLayout.swift in Sources */,
 				52EDDA601F6C200D0048E4D7 /* UIViewController+Alert.swift in Sources */,
 				52EDDA571F6BD94A0048E4D7 /* Reachability.swift in Sources */,
 				52EDDA541F6AC40B0048E4D7 /* FeedImageCell.swift in Sources */,
 				52EDDA4E1F6AB4E40048E4D7 /* FeedMedia.swift in Sources */,
+				52EDDA6C1F6D31650048E4D7 /* ImageGalleryViewController+Delegates.swift in Sources */,
 				52CD0FEE1F6A6CCB008DF1B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -49,14 +49,7 @@ class ImageGalleryViewControllerTests: XCTestCase {
             XCTAssertTrue(viewController.conforms(to: UICollectionViewDelegate.self))
         }
     }
-    
-    // Test that view controller confirms to CollectionView delegate FlowLayout
-    func testConfirmsToCollectionViewDelegateFlowLayout() {
-        if let viewController = galleryViewController {
-            XCTAssertTrue(viewController.conforms(to: UICollectionViewDelegateFlowLayout.self))
-        }
-    }
-    
+        
     // Test number of collection view cell against to feed items
     func testNumberOfCells() {
         if let collectionView = galleryViewController.imageCollectionView, let feedItems = galleryViewController.publicFeed?.items?.count {
@@ -92,9 +85,13 @@ extension ImageGalleryViewControllerTests {
     
     func getPublicFeeds() {
         self.expectation = self.expectation(description: "Expectation for public feeds")
-        ServiceLayerManager.getPublicFeeds { [weak self] feed in
-            self?.galleryViewController.publicFeed = feed
-            self?.expectation?.fulfill()
+        ServiceLayerManager.getPublicFeeds { [weak self] (feed, error) in
+            if let feed = feed {
+                self?.galleryViewController.publicFeed = feed
+                self?.expectation?.fulfill()
+            }else {
+                XCTAssertNil(error, "\(String(describing: error))")
+            }
         }
         waitForExpectations(timeout: TimeInterval(self.expectationTimeout)) { (error) in
             XCTAssertNil(error, "\(String(describing: error))")
