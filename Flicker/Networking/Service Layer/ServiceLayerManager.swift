@@ -20,9 +20,10 @@ class ServiceLayerManager {
     class func getPublicFeeds(completionHandler: @escaping (_ feed: FeedJSON?, _ error: String?) -> ()) {
         if Reachability()?.currentReachabilityStatus != .notReachable {
             let publicFeedURL = FeedAPI.baseURL.rawValue + FeedAPI.publicURL.rawValue
-            Alamofire.request(publicFeedURL).responseString { responseData in
+            
+            Alamofire.request(publicFeedURL).responseJSON { responseData in
                 if let resultValue = responseData.result.value {
-                    let feed = Mapper<FeedJSON>().map(JSONString:resultValue)
+                    let feed = Mapper<FeedJSON>().map(JSONObject: resultValue)
                     completionHandler(feed, nil)
                 }else {
                     completionHandler(nil, responseData.error.debugDescription)
@@ -31,5 +32,5 @@ class ServiceLayerManager {
         }else {
             completionHandler(nil, NO_CONNECTION)
         }
-    }
+    }    
 }

@@ -11,4 +11,7 @@ import Foundation
 
 let ERROR = "Error".localized
 let OK = "OK".localized
+let RETRY = "Retry".localized
+let CANCEL = "Cancel".localized
 let NO_CONNECTION = "No Internet Connection".localized
+let NO_DATA = "No Data Returned".localized

@@ -12,11 +12,16 @@ import UIKit
 extension UIViewController {
     
     // Function to show simple alert with title and message and return complition block
-    func showAlert(title: String = ERROR, message: String, completionHandler: (() -> ())? = nil) {
+    func showAlert(title: String = ERROR, message: String, completionHandler: ((UIAlertAction) -> ())? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: OK, style: .cancel, handler: { _ in
+        alertController.addAction(UIAlertAction(title: RETRY, style: .default, handler: { alertAction in
             if let handler = completionHandler {
-                handler()
+                handler(alertAction)
+            }
+        }))
+        alertController.addAction(UIAlertAction(title: CANCEL, style: .cancel, handler: { alertAction in
+            if let handler = completionHandler {
+                handler(alertAction)
             }
         }))
         present(alertController, animated: true, completion: nil)

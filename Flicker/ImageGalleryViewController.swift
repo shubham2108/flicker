@@ -55,10 +55,20 @@ class ImageGalleryViewController: UIViewController {
                 self?.imageCollectionView.reloadData()
             }else {
                 guard let error = error else {return}
-                self?.showAlert(title: ERROR, message: error, completionHandler: { [weak self] in
-                    self?.navigationController?.popViewController(animated: true)
+                self?.showAlert(title: ERROR, message: error, completionHandler: { [weak self] action in
+                    self?.handleAlertActions(actoin: action)
                 })
             }
+        }
+    }
+    
+    //Handle alert actions
+    func handleAlertActions(actoin: UIAlertAction) {
+        switch actoin.style {
+        case .default:
+            self.getFeeds()
+        default:
+            self.navigationController?.popViewController(animated: true)
         }
     }
 }
