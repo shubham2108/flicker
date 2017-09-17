@@ -13,11 +13,15 @@ import ReachabilitySwift
 class ServiceLayerManager {
     
     // function to handles the API response for any error and returns the result value
-    class func request(_ url: URLConvertible, method: HTTPMethod = .get, parameters: Parameters? = nil, completionHandler: @escaping (_ responseData: Any?, _ error: String?) -> ()) {
+    class func request(_ url: URLConvertible, method: HTTPMethod = .get, parameters: Parameters? = nil, completionHandler: @escaping (_ responseData: String?, _ error: String?) -> ()) {
         
         if Reachability()?.currentReachabilityStatus != .notReachable {
-            Alamofire.request(url).responseJSON { responseData in
-                if let resultValue = responseData.result.value {
+            Alamofire.request(url).responseString { responseData in
+                if var resultValue = responseData.result.value {
+                    //Json parse error handling for string "\\'"
+                    if resultValue.contains("\\'") {
+                        resultValue = resultValue.replacingOccurrences(of: "\\'", with: "'")
+                    }
                     completionHandler(resultValue, nil)
                 }else {
                     completionHandler(nil, responseData.error?.localizedDescription)

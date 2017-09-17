@@ -15,7 +15,7 @@ extension ServiceLayerManager {
     class func getPublicFeeds(completionHandler: @escaping (_ feed: FeedJSON?, _ error: String?) -> ()) {
         request(PUBLIC_FEEDS) { (resultValue, errorString) in
             if let resultValue = resultValue {
-                let feed = Mapper<FeedJSON>().map(JSONObject: resultValue)
+                let feed = Mapper<FeedJSON>().map(JSONString: resultValue)
                 completionHandler(feed, nil)
             }else {
                 completionHandler(nil, errorString)
