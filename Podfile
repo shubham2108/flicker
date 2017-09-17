@@ -10,6 +10,7 @@ target 'Flicker' do
     pod 'Alamofire'
     pod 'AlamofireObjectMapper', '~> 4.0'
 	pod 'SDWebImage'
+    pod 'ReachabilitySwift'
 
   target 'FlickerTests' do
     inherit! :search_paths

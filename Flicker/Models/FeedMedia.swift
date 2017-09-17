@@ -14,9 +14,7 @@ class FeedMedia: Mappable {
     var m: String?
     
     required init?(map: Map){}
-    
-    init() {}
-    
+        
     func mapping(map: Map) {
         self.m <- map["m"]
     }

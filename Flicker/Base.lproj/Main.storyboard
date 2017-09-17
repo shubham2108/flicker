@@ -113,10 +113,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="galleryViewModel" destination="Ipf-R7-aIk" id="cyX-CS-Sqy"/>
                         <outlet property="imageCollectionView" destination="Wzj-nD-7Ua" id="W7v-1g-D59"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9s-Ga-cdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Ipf-R7-aIk" customClass="ImageGalleryViewModel" customModule="Flicker" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="856.79999999999995" y="138.98050974512745"/>
         </scene>

@@ -52,14 +52,16 @@ class ImageGalleryViewControllerTests: XCTestCase {
         
     // Test number of collection view cell against to feed items
     func testNumberOfCells() {
-        if let collectionView = galleryViewController.imageCollectionView, let feedItems = galleryViewController.publicFeed?.items?.count {
+        if let collectionView = galleryViewController.imageCollectionView {
+            let feedItems = galleryViewController.galleryViewModel.numberOfItems(in: 0)
             let noOfCells = collectionView.numberOfItems(inSection: 0)
             XCTAssertEqual(feedItems, noOfCells)
         }
     }
     
     func testCollectionViewCellConfigureMethod() {
-        if let collectionView = galleryViewController.imageCollectionView, let feedItems = galleryViewController.publicFeed?.items?.count {
+        if let collectionView = galleryViewController.imageCollectionView {
+            let feedItems = galleryViewController.galleryViewModel.numberOfItems(in: 0)
             for item in 0 ..< feedItems {
                 let indexPath = IndexPath(row: item, section: 0)
                 _ = galleryViewController.collectionView(collectionView, cellForItemAt: indexPath)
@@ -93,7 +95,7 @@ extension ImageGalleryViewControllerTests {
         ServiceLayerManager.getPublicFeeds { [weak self] (feed, error) in
             guard let strongSelf = self else { return }
             if let feed = feed {
-                strongSelf.galleryViewController.publicFeed = feed
+                strongSelf.galleryViewController.galleryViewModel.publicFeed = feed
                 strongSelf.expectation?.fulfill()
             }else {
                 XCTAssertNil(error, "\(String(describing: error))")

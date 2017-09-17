@@ -14,7 +14,7 @@ extension ImageGalleryViewController: UICollectionViewDelegate, UICollectionView
     
     // Tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return publicFeed?.items?.count ?? 0
+        return galleryViewModel.numberOfItems(in: section)
     }
     
     // Make a cell for each cell index path
@@ -22,7 +22,7 @@ extension ImageGalleryViewController: UICollectionViewDelegate, UICollectionView
         
         // Get a reference to our storyboard cell
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as? FeedImageCell {
-            cell.imageURL = publicFeed?.items?[indexPath.row].media?.m
+            cell.imageURL = galleryViewModel?.imageUrl(for: indexPath)
             return cell
         }
         return UICollectionViewCell()

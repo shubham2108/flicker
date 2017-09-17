@@ -12,16 +12,15 @@ class ImageGalleryViewController: UIViewController {
     
     // MARK: - IBOutlet
     @IBOutlet weak var imageCollectionView: UICollectionView!
+    @IBOutlet var galleryViewModel: ImageGalleryViewModel!
     
     // MARK: - Properties
     
-    // Static Properties
+    // Constant Properties
     let reuseIdentifier = "feedCell"
     let cellNibName = "FeedImageCell"
     
-    
-    //Type Properties
-    var publicFeed : FeedJSON? = nil
+    //Variable Properties
     var isGrid = true
     
     
@@ -65,10 +64,9 @@ class ImageGalleryViewController: UIViewController {
     
     // Get public feed from flicker
     fileprivate func getFeeds() {
-        ServiceLayerManager.getPublicFeeds { [weak self] (feed, error) in
+        galleryViewModel?.getFeeds(completion: { [weak self] (success, error) in
             guard let strongSelf = self else { return }
-            if let feed = feed {
-                strongSelf.publicFeed = feed
+            if success {
                 strongSelf.imageCollectionView.reloadData()
             }else {
                 guard let error = error else {return}
@@ -76,7 +74,7 @@ class ImageGalleryViewController: UIViewController {
                     strongSelf.handleAlertActions(actoin: action)
                 })
             }
-        }
+        })
     }
     
     //Handle alert actions

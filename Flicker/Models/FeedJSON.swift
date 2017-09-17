@@ -19,9 +19,7 @@ class FeedJSON: Mappable {
     var items: [FeedItem]?
     
     required init?(map: Map){}
-    
-    init() {}
-    
+        
     func mapping(map: Map) {
         self.title <- map["title"]
         self.link <- map["link"]

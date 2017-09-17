@@ -23,9 +23,7 @@ class FeedItem: Mappable {
     var tags: String?
     
     required init?(map: Map){}
-    
-    init() {}
-    
+        
     func mapping(map: Map) {
         self.title <- map["title"]
         self.link <- map["link"]

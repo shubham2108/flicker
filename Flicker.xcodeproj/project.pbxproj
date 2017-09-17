@@ -10,6 +10,7 @@
 		26662E6490DE3AE229E9D8FA /* Pods_FlickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B8C70BD8A0A4F57D9B7C25 /* Pods_FlickerTests.framework */; };
 		35347B98B3745D65A45A6315 /* Pods_FlickerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC4B5F872BF8FE1785FE1CD /* Pods_FlickerUITests.framework */; };
 		36FD002E369E6EB5F7780BA9 /* Pods_Flicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34CB4B29429AAE00382D43D2 /* Pods_Flicker.framework */; };
+		52844DB21F6E72EC0009AAAB /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52844DB11F6E72EC0009AAAB /* ImageGalleryViewModel.swift */; };
 		52CD0FEE1F6A6CCB008DF1B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD0FED1F6A6CCB008DF1B6 /* AppDelegate.swift */; };
 		52CD0FF01F6A6CCB008DF1B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD0FEF1F6A6CCB008DF1B6 /* ViewController.swift */; };
 		52CD0FF31F6A6CCB008DF1B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CD0FF11F6A6CCB008DF1B6 /* Main.storyboard */; };
@@ -24,7 +25,6 @@
 		52EDDA501F6ABDCB0048E4D7 /* ImageGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA4F1F6ABDCB0048E4D7 /* ImageGalleryViewController.swift */; };
 		52EDDA541F6AC40B0048E4D7 /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA521F6AC40B0048E4D7 /* FeedImageCell.swift */; };
 		52EDDA551F6AC40B0048E4D7 /* FeedImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EDDA531F6AC40B0048E4D7 /* FeedImageCell.xib */; };
-		52EDDA571F6BD94A0048E4D7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA561F6BD94A0048E4D7 /* Reachability.swift */; };
 		52EDDA591F6BE28A0048E4D7 /* ImageGalleryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA581F6BE28A0048E4D7 /* ImageGalleryViewControllerTests.swift */; };
 		52EDDA601F6C200D0048E4D7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA5F1F6C200C0048E4D7 /* UIViewController+Alert.swift */; };
 		52EDDA621F6C252F0048E4D7 /* FlickerStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA611F6C252F0048E4D7 /* FlickerStrings.swift */; };
@@ -32,7 +32,7 @@
 		52EDDA681F6C63DF0048E4D7 /* GridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA671F6C63DF0048E4D7 /* GridFlowLayout.swift */; };
 		52EDDA6A1F6C63FE0048E4D7 /* ListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA691F6C63FE0048E4D7 /* ListFlowLayout.swift */; };
 		52EDDA6C1F6D31650048E4D7 /* ImageGalleryViewController+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA6B1F6D31650048E4D7 /* ImageGalleryViewController+Delegates.swift */; };
-		52EDDA711F6D60AD0048E4D7 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA701F6D60AD0048E4D7 /* Readme.md */; };
+		52EDDA711F6D60AD0048E4D7 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 52EDDA701F6D60AD0048E4D7 /* Readme.md */; };
 		52EDDA731F6DAA760048E4D7 /* ServiceLayerManager+PublicFeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA721F6DAA760048E4D7 /* ServiceLayerManager+PublicFeeds.swift */; };
 		52EDDA751F6DB4D10048E4D7 /* AppURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDDA741F6DB4D10048E4D7 /* AppURL.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +58,7 @@
 		160FE838F78964B2DCADEF39 /* Pods-FlickerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickerUITests/Pods-FlickerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		34CB4B29429AAE00382D43D2 /* Pods_Flicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC4B5F872BF8FE1785FE1CD /* Pods_FlickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52844DB11F6E72EC0009AAAB /* ImageGalleryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewModel.swift; sourceTree = "<group>"; };
 		52CD0FEA1F6A6CCB008DF1B6 /* Flicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52CD0FED1F6A6CCB008DF1B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52CD0FEF1F6A6CCB008DF1B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Flicker/ViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -78,7 +79,6 @@
 		52EDDA4F1F6ABDCB0048E4D7 /* ImageGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewController.swift; sourceTree = "<group>"; };
 		52EDDA521F6AC40B0048E4D7 /* FeedImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 		52EDDA531F6AC40B0048E4D7 /* FeedImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedImageCell.xib; sourceTree = "<group>"; };
-		52EDDA561F6BD94A0048E4D7 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		52EDDA581F6BE28A0048E4D7 /* ImageGalleryViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewControllerTests.swift; sourceTree = "<group>"; };
 		52EDDA5F1F6C200C0048E4D7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		52EDDA611F6C252F0048E4D7 /* FlickerStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlickerStrings.swift; path = Constants/FlickerStrings.swift; sourceTree = "<group>"; };
@@ -125,6 +125,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52844DB01F6E72C00009AAAB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				52844DB11F6E72EC0009AAAB /* ImageGalleryViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
 		52CD0FE11F6A6CCB008DF1B6 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +159,7 @@
 		52CD0FEC1F6A6CCB008DF1B6 /* Flicker */ = {
 			isa = PBXGroup;
 			children = (
+				52844DB01F6E72C00009AAAB /* ViewModels */,
 				52EDDA5E1F6C1F760048E4D7 /* Utility */,
 				52CD101B1F6A8FE6008DF1B6 /* Models */,
 				52CD101C1F6A8FE6008DF1B6 /* Networking */,
@@ -199,7 +208,6 @@
 		52CD101C1F6A8FE6008DF1B6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				52EDDA561F6BD94A0048E4D7 /* Reachability.swift */,
 				52CD101D1F6A8FE6008DF1B6 /* Service Layer */,
 			);
 			path = Networking;
@@ -400,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EDDA711F6D60AD0048E4D7 /* Readme.md in Resources */,
 				52CD0FF81F6A6CCB008DF1B6 /* LaunchScreen.storyboard in Resources */,
 				52EDDA551F6AC40B0048E4D7 /* FeedImageCell.xib in Resources */,
 				52CD0FF51F6A6CCB008DF1B6 /* Assets.xcassets in Resources */,
@@ -563,6 +572,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -570,6 +580,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,12 +603,11 @@
 				52EDDA751F6DB4D10048E4D7 /* AppURL.swift in Sources */,
 				52EDDA481F6AB41D0048E4D7 /* FeedJSON.swift in Sources */,
 				52CD0FF01F6A6CCB008DF1B6 /* ViewController.swift in Sources */,
-				52EDDA711F6D60AD0048E4D7 /* Readme.md in Sources */,
+				52844DB21F6E72EC0009AAAB /* ImageGalleryViewModel.swift in Sources */,
 				52EDDA4C1F6AB4AC0048E4D7 /* FeedItem.swift in Sources */,
 				52EDDA651F6C27960048E4D7 /* String+Ext.swift in Sources */,
 				52EDDA681F6C63DF0048E4D7 /* GridFlowLayout.swift in Sources */,
 				52EDDA601F6C200D0048E4D7 /* UIViewController+Alert.swift in Sources */,
-				52EDDA571F6BD94A0048E4D7 /* Reachability.swift in Sources */,
 				52EDDA541F6AC40B0048E4D7 /* FeedImageCell.swift in Sources */,
 				52EDDA4E1F6AB4E40048E4D7 /* FeedMedia.swift in Sources */,
 				52EDDA6C1F6D31650048E4D7 /* ImageGalleryViewController+Delegates.swift in Sources */,
