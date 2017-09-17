@@ -1,8 +1,8 @@
 
-This is sample iOS application for iPhone to query public images by using Flickr Public API, Alamofire, ObjectMapper, and SDWebimage.
+This is an image gallery iOS application which allows the user to fetch and view public images from Flicker.
 
 
-![Git URL](https://github.com/shubham2108/Flicker/tree/Development)
+![Git URL](https://github.com/shubham2108/Flicker)
 
 
 ## Features
@@ -19,6 +19,7 @@ This is sample iOS application for iPhone to query public images by using Flickr
 - iOS 10.0+
 - Xcode 8.0+
 - Swift 3.0
+- Libraries used - Alamofire, ObjectMapper, and SDWebimage
 
 ## Installation
 
