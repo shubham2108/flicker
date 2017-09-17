@@ -1,5 +1,5 @@
 
-This is an image gallery iOS application which allows the user to fetch and view public images from Flicker.
+This is an image gallery iOS application which display the last 20 images from Flickr using Flickr's Public feed API.
 
 
 ![Git URL](https://github.com/shubham2108/Flicker)
@@ -7,10 +7,10 @@ This is an image gallery iOS application which allows the user to fetch and view
 
 ## Features
 
-- [x] Provide Flickr public images
-- [x] One can view all images in Flicker gallery
-- [x] One can view the enlarged verion of the image by single tapping on it and swap left right to see all enlarged         images.
-- [x] One can go back to the Flicker gallery by tapping on the enlarged image once again.
+- [x] Provide last 20 Flickr public images
+- [x] One can view last 20 images in Flicker gallery
+- [x] One can view the enlarged verion of the image by single tapping on it and swap left right to see all enlarged images.
+- [x] One can go back to the Flickr gallery by tapping on the enlarged image once again.
 - [x] One can refresh gallery with new public images by tapping on the refresh button at the upper right corner.
 
 
@@ -19,7 +19,7 @@ This is an image gallery iOS application which allows the user to fetch and view
 - iOS 10.0+
 - Xcode 8.0+
 - Swift 3.0
-- Libraries used - Alamofire, ObjectMapper, and SDWebimage
+- Libraries used - Alamofire, ObjectMapper, ReachabilitySwift and SDWebimage
 
 ## Installation
 
