@@ -13,7 +13,7 @@ class ImageGalleryViewModel: NSObject {
     //Type Properties
     var publicFeed : FeedJSON? = nil
     
-    // Get public feed from flicker
+    // Get public feed from Flicker
     func getFeeds(completion: @escaping (_ success: Bool, _ error: String?) -> ()) {
         ServiceLayerManager.getPublicFeeds { [weak self] (feed, error) in
             guard let strongSelf = self else { return }
@@ -27,7 +27,7 @@ class ImageGalleryViewModel: NSObject {
         }
     }
     
-    // MARK: - Values to display in collection view
+    // MARK: - Values to display in CollectionView
     func numberOfItems(in section: Int) -> Int {
         return publicFeed?.items?.count ?? 0
     }

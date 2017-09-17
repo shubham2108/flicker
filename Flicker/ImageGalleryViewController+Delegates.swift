@@ -12,7 +12,7 @@ import UIKit
 
 extension ImageGalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    // Tell the collection view how many cells to make
+    // Assign the number of cells to the CollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return galleryViewModel.numberOfItems(in: section)
     }
@@ -20,7 +20,7 @@ extension ImageGalleryViewController: UICollectionViewDelegate, UICollectionView
     // Make a cell for each cell index path
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        // Get a reference to our storyboard cell
+        // Initialize the CollectionView cell
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as? FeedImageCell {
             cell.imageURL = galleryViewModel?.imageUrl(for: indexPath)
             return cell
@@ -28,7 +28,7 @@ extension ImageGalleryViewController: UICollectionViewDelegate, UICollectionView
         return UICollectionViewCell()
     }
     
-    //zoom the selected image
+    // Enlarge the selected image
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         manageCollectionViewLayout(collectionView, indexPath: indexPath)
     }

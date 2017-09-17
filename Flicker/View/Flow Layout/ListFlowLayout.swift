@@ -12,7 +12,7 @@ class ListFlowLayout: UICollectionViewFlowLayout {
     
     var selctedIndex: IndexPath?
     
-    // Class initilazation methods
+    // Class initialization
     override init() {
         super.init()
         setupLayout()
@@ -29,19 +29,23 @@ class ListFlowLayout: UICollectionViewFlowLayout {
         setupLayout()
     }
     
-    //Sets up the layout for the collectionView. 0 distance between each cell, and horizontal layout
+    // Set up the layout for the collection view
     fileprivate func setupLayout() {
         minimumInteritemSpacing = 0
         minimumLineSpacing = 0
         scrollDirection = .horizontal
     }
     
-    // Set cell width here
+    // Set cell width
     func itemWidth() -> CGFloat {
-        return collectionView!.frame.width
+        if let collectionView = collectionView {
+            return collectionView.frame.width
+        }else {
+            return 375.0
+        }
     }
     
-    // Set cell height here
+    // Set cell height
     func itemHeight() -> CGFloat {
         return itemWidth()
     }
@@ -56,15 +60,18 @@ class ListFlowLayout: UICollectionViewFlowLayout {
     }
     
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {
-        //return collection view content offset if selected index is nil
-        guard let index = selctedIndex else {
-            return collectionView!.contentOffset
+        // Return the CollectionView content offset if selected index is nil
+        guard let collectionView = collectionView else { return .zero }
+        
+        if let index = selctedIndex {
+            // Return the selected index offset
+            return CGPoint(x: itemWidth() * CGFloat(index.item) , y: collectionView.contentOffset.y)
+        }else {
+            return collectionView.contentOffset
         }
-        //return selected index offset
-        return CGPoint(x: itemWidth() * CGFloat(index.item) , y: collectionView!.contentOffset.y)
     }
     
-    // Handling pagination effect in collection view
+    // Handle pagination effect in the CollectionView
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
         
         guard let collectionView = collectionView, let attributesForVisibleCells = layoutAttributesForElements(in: collectionView.bounds) else {
@@ -77,7 +84,7 @@ class ListFlowLayout: UICollectionViewFlowLayout {
         
         var candidateAttributes : UICollectionViewLayoutAttributes?
         for attributes in attributesForVisibleCells {
-            //Skip if layout attributes are not intended for a cell
+            // Skip if the layout attributes are not intended to a cell
             if attributes.representedElementCategory != .cell {
                 continue
             }
@@ -88,10 +95,11 @@ class ListFlowLayout: UICollectionViewFlowLayout {
                     candidateAttributes = attributes
                 }
             }else {
-                // Initialize for first time
+                // Initialize the layout attributes for the first time
                 candidateAttributes = attributes
             }
         }
-        return CGPoint(x : candidateAttributes!.center.x - halfWidth, y : proposedContentOffset.y)
+        guard let attributes = candidateAttributes else { return .zero }
+        return CGPoint(x : attributes.center.x - halfWidth, y : proposedContentOffset.y)
     }
 }

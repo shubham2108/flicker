@@ -50,7 +50,7 @@ class ImageGalleryViewControllerTests: XCTestCase {
         }
     }
         
-    // Test number of collection view cell against to feed items
+    // Test the number of CollectionView cells against feed items
     func testNumberOfCells() {
         if let collectionView = galleryViewController.imageCollectionView {
             let feedItems = galleryViewController.galleryViewModel.numberOfItems(in: 0)

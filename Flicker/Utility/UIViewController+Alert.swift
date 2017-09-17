@@ -11,7 +11,7 @@ import UIKit
 
 extension UIViewController {
     
-    // Function to show simple alert with title and message and return complition block
+    // Display simple alert with title and message and return completion closure
     func showAlert(title: String = ERROR, message: String, completionHandler: ((UIAlertAction) -> ())? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: RETRY, style: .default, handler: { alertAction in

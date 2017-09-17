@@ -16,6 +16,7 @@ class FeedImageCell: UICollectionViewCell {
     
     var imageURL: String? {
         didSet {
+            // Download image from image URL
             if let url = imageURL {
                 feedImageView.sd_setShowActivityIndicatorView(true)
                 feedImageView.sd_setIndicatorStyle(.gray)
@@ -23,7 +24,7 @@ class FeedImageCell: UICollectionViewCell {
             }
         }
     }
-    
+    // Reset cell content for reusability
     override func prepareForReuse() {
         super.prepareForReuse()
         feedImageView.image = nil

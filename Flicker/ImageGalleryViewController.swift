@@ -20,7 +20,7 @@ class ImageGalleryViewController: UIViewController {
     let reuseIdentifier = "feedCell"
     let cellNibName = "FeedImageCell"
     
-    //Variable Properties
+    // Variable Properties
     var isGrid = true
     
     
@@ -34,13 +34,13 @@ class ImageGalleryViewController: UIViewController {
         getFeeds()
     }
     
-    //Here initialize view controller
+    // Initialize the view of the controller
     func initializeViewController() {
         registerCollectionViewCell()
         imageCollectionView.setCollectionViewLayout(GridFlowLayout(), animated: true)
     }
     
-    // Register custom cell with collection view
+    // Register custom cell with CollectionView
     fileprivate func registerCollectionViewCell() {
         let cellNib = UINib(nibName: cellNibName, bundle:nil)
         imageCollectionView.register(cellNib, forCellWithReuseIdentifier: reuseIdentifier)
@@ -51,18 +51,17 @@ class ImageGalleryViewController: UIViewController {
         getFeeds()
     }
     
-    //Manage UICollection View Layout
+    //Manage CollectionView Layout
     func manageCollectionViewLayout(_ collectionView: UICollectionView, indexPath: IndexPath?) {
         UIView.animate(withDuration: 0.2) { () -> Void in
-            collectionView.collectionViewLayout.invalidateLayout()
             collectionView.setCollectionViewLayout(self.isGrid ? ListFlowLayout(index: indexPath) : GridFlowLayout(), animated: true)
         }
         isGrid = !isGrid
-        // change background color based on flow layout
+        // Change background color based on flow layout
         collectionView.backgroundColor = isGrid ? .clear : .black
     }
     
-    // Get public feed from flicker
+    // Get public feed from Flicker
     fileprivate func getFeeds() {
         galleryViewModel?.getFeeds(completion: { [weak self] (success, error) in
             guard let strongSelf = self else { return }

@@ -11,10 +11,14 @@ import ObjectMapper
 
 extension ServiceLayerManager {
     
-    // function to get pubic feed from Flicker
+    // Get pubic feed from Flicker
     class func getPublicFeeds(completionHandler: @escaping (_ feed: FeedJSON?, _ error: String?) -> ()) {
         request(PUBLIC_FEEDS) { (resultValue, errorString) in
-            if let resultValue = resultValue {
+            if var resultValue = resultValue {
+                // Handle Json parse error for string "\\'"
+                if resultValue.contains("\\'") {
+                    resultValue = resultValue.replacingOccurrences(of: "\\'", with: "'")
+                }
                 let feed = Mapper<FeedJSON>().map(JSONString: resultValue)
                 completionHandler(feed, nil)
             }else {

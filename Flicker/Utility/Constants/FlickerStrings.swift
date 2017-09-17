@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+// Constant strings for localization
 let ERROR = "Error".localized
 let OK = "OK".localized
 let RETRY = "Retry".localized
