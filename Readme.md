@@ -1,5 +1,5 @@
 
-This is an image gallery iOS application which display the last 20 images from Flickr using Flickr's Public feed API.
+This is an image gallery iOS application which displays the last 20 images from Flickr using Flickr's Public feed API.
 
 
 ![Git URL](https://github.com/shubham2108/Flicker)
@@ -9,7 +9,7 @@ This is an image gallery iOS application which display the last 20 images from F
 
 - [x] Provide last 20 Flickr public images
 - [x] One can view last 20 images in Flicker gallery
-- [x] One can view the enlarged verion of the image by single tapping on it and swap left right to see all enlarged images.
+- [x] One can view the enlarged version of the image by single tapping on it and swap left right to see all enlarged images.
 - [x] One can go back to the Flickr gallery by tapping on the enlarged image once again.
 - [x] One can refresh gallery with new public images by tapping on the refresh button at the upper right corner.
 
